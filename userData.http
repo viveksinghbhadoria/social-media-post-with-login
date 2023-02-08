@@ -1,0 +1,74 @@
+//register user api
+POST http://localhost:3001/register/
+Content-Type: application/json
+
+{
+    "email":"kartik@gmail.com",
+    "password":"123",
+    "username":"kartik singh"
+}
+###
+//login user api
+POST http://localhost:3001/login/
+Content-Type: application/json
+
+{
+    "email":"kartik@gmail.com",
+    "password":"123"
+}
+
+###
+//forgot password api
+PUT http://localhost:3001/forgot-user-password/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcnRpa0BnbWFpbC5jb20iLCJpYXQiOjE2NzU4Mzg3NjJ9.d4w4ax16TC55HqdEDgv0Cz6bE6sN6c6aGDSiCtuJtaM
+Content-Type: application/json
+
+{
+    "newPassword":"12345"
+}
+
+
+###
+// create social media post api
+POST http://localhost:3001/user/social-media-post/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcnRpa0BnbWFpbC5jb20iLCJpYXQiOjE2NzU4Mzg3NjJ9.d4w4ax16TC55HqdEDgv0Cz6bE6sN6c6aGDSiCtuJtaM
+Content-Type: application/json
+
+{
+    "post_content":"Good Morning Everyone. This is my project based on NodeJs."
+}
+
+###
+//get social media post
+GET http://localhost:3001/social-media-post/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcnRpa0BnbWFpbC5jb20iLCJpYXQiOjE2NzU4Mzg3NjJ9.d4w4ax16TC55HqdEDgv0Cz6bE6sN6c6aGDSiCtuJtaM
+
+
+###
+// delete social media post api
+DELETE http://localhost:3001/social-media-post/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpdmVrMTIzLmJoYWRvcmlhQGdtYWlsLmNvbSIsImlhdCI6MTY3NTc5Mzk2Nn0.jxB9Rlz9IFoNpxm6dBTHBT5NsDm6WKlbbhrJSlqlsMw
+
+
+###
+
+//like & comment api
+POST http://localhost:3001/user/comment/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcnRpa0BnbWFpbC5jb20iLCJpYXQiOjE2NzU4Mzg3NjJ9.d4w4ax16TC55HqdEDgv0Cz6bE6sN6c6aGDSiCtuJtaM
+Content-Type: application/json
+
+{
+    "comment":"Good to know that.",
+    "like":"liked"
+}
+
+###
+//get like & comment on post api
+GET http://localhost:3001/comment/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcnRpa0BnbWFpbC5jb20iLCJpYXQiOjE2NzU4Mzg3NjJ9.d4w4ax16TC55HqdEDgv0Cz6bE6sN6c6aGDSiCtuJtaM
+
+
+###
+//delete comment api
+DELETE http://localhost:3001/comment/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcnRpa0BnbWFpbC5jb20iLCJpYXQiOjE2NzU4Mzg3NjJ9.d4w4ax16TC55HqdEDgv0Cz6bE6sN6c6aGDSiCtuJtaM
